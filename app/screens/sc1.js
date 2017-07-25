@@ -1,33 +1,46 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-
+import { Button,TextInput, View, StyleSheet } from 'react-native';
 
 export default class Sc1 extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      username : null,
+      password : null,
+    };
+  }
+  onPress = () => {
+    if(this.state.username==null){
+      alert ("username is null !")
+      console.log(this.state.username);
+       return false;
+    }
+    alert ("Login Successfully !")
+    console.log(this.state.username);
+    console.log(this.state.password);
+    this.props.navigation.navigate('Tabs');
+
+  }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-        Sc1
-        </Text>
-        <Text style={styles.instructions}>
-          xxxxx
-        </Text>
-        <Text style={styles.instructions}>
-          xxxxx
-        </Text>
+      <TextInput
+        style={{height: 40,width:200, borderColor: 'gray', borderWidth: 1}}
+        onChangeText={(username) => this.setState({username})}
+        value={this.state.username}
+      />
+      <TextInput
+        style={{marginTop:30,marginBottom:30 ,height: 40,width:200, borderColor: 'gray', borderWidth: 1}}
+        onChangeText={(password) => this.setState({password})}
+        value={this.state.password}
+      />
+      <Button
+        onPress={this.onPress}
+        title="Press More"
+        color="#13a26e"
+      />
       </View>
     );
   }
@@ -36,21 +49,22 @@ export default class Sc1 extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
   },
-  welcome: {
-    fontSize: 20,
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    color: '#34495e',
   },
 });
 
+Sc1.navigationOptions = {
+  /*  header: null, */
+header:null,
 
-AppRegistry.registerComponent('wproject', () => Sc1);
+
+};
