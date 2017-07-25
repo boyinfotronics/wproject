@@ -1,52 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { LoginNavStack, Tabs } from './config/router';
 
-export default class wproject extends Component {
+class wproject extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-        xxxxxaaaa
-        </Text>
-        <Text style={styles.instructions}>
-          xxxxx
-        </Text>
-        <Text style={styles.instructions}>
-xxxxx
-        </Text>
-      </View>
-    );
+    return <LoginNavStack />;
   }
 }
+wproject.navigationOptions = {
+  header: null,
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
-AppRegistry.registerComponent('wproject', () => wproject);
+export default wproject;
