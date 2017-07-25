@@ -16,11 +16,14 @@ export default class Sc1 extends Component {
       console.log(this.state.username);
        return false;
     }
+    if(this.state.username=="admin"){
+  this.props.navigation.navigate('Sc2');
     alert ("Login Successfully !")
     console.log(this.state.username);
     console.log(this.state.password);
-    this.props.navigation.navigate('Tabs');
 
+    return false;
+  }
   }
 
   render() {

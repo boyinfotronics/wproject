@@ -13,14 +13,14 @@ import {
 } from 'react-native';
 
 
-export default class Sc2 extends Component {
+export default class Sc3 extends Component {
 
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-        Sc2
+        Sc3
         </Text>
       </View>
     );
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
 });
 
 
-AppRegistry.registerComponent('wproject', () => Sc2);
+AppRegistry.registerComponent('wproject', () => Sc3);
