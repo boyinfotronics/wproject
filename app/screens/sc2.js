@@ -9,11 +9,17 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 
 
 export default class Sc2 extends Component {
+onPress = () => {
+
+  this.props.navigation.goBack();
+
+}
 
 
   render() {
@@ -22,6 +28,13 @@ export default class Sc2 extends Component {
         <Text style={styles.welcome}>
         Sc2
         </Text>
+
+        <Button
+          onPress={this.onPress}
+          title="Press More"
+          color="#13a26e"
+        />
+
       </View>
     );
   }

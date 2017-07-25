@@ -8,10 +8,11 @@ export const LoginNavStack = StackNavigator({
   Sc1: {
     screen: Sc1
   },
-  Sc2: {
-   screen: Sc2,
- },
   Sc3: {
     screen: Sc3,
   },
+  Sc2: {
+   screen: Sc2,
+ },
+
 });

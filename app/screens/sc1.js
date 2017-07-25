@@ -11,19 +11,22 @@ export default class Sc1 extends Component {
     };
   }
   onPress = () => {
-    if(this.state.username==null){
-      alert ("username is null !")
-      console.log(this.state.username);
-       return false;
-    }
-    if(this.state.username=="admin"){
-  this.props.navigation.navigate('Sc2');
-    alert ("Login Successfully !")
-    console.log(this.state.username);
-    console.log(this.state.password);
 
-    return false;
-  }
+          if(this.state.username==null){
+            alert ("username is null !")
+            console.log(this.state.username);
+             return false;
+          }
+
+          if(this.state.username=="admin"){
+          alert ("Login Successfully !")
+          this.props.navigation.navigate('Sc2');
+
+            console.log(this.state.username);
+            console.log(this.state.password);
+
+            return false;
+          }
   }
 
   render() {
